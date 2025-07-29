@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Image Filter App</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="imageInput" name="image" accept="image/*" required>
+    <select id="filterSelect" name="filter" required>
+    <option value="mean">Mean Filter</option>
+    <option value="median">Median Filter</option>
+    <option value="gaussian">Gaussian Filter</option>
+    <option value="grayscale">Grayscale</option>
+    <option value="laplacian">Laplacian</option>
+    <option value="highpass">High-Pass</option>
+</select>
+
+    <button type="submit">Apply Filter</button>
+</form>
+<div id="output">
+            <h2>Filtered Image:</h2>
+            <img id="filteredImage" src="" alt="Filtered image will appear here" style="display:none;">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
